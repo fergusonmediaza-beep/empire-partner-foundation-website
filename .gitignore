@@ -1,0 +1,10 @@
+
+
+#Ignore vscode AI rules
+.github/instructions/codacy.instructions.md
+
+# OS files
+.DS_Store
+
+# Claude Code project memory
+.claude

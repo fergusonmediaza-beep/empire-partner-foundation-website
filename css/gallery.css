@@ -1,0 +1,313 @@
+.header-hero {
+    background-image: url('/assets/gallery-hero.webp'); 
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    color: white;
+    justify-content: flex-end;
+    padding-right: 5%;
+    margin-top: 110px !important;
+}
+
+.gallery-container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 200px; 
+    display: block;
+}
+
+@media (width < 992px) {
+    .left-column { 
+    display: flex; 
+    flex-direction: column; 
+   }
+
+    .right-column { 
+    display: flex; 
+    flex-direction: column; 
+   }
+
+   .right-column .gallery-item { 
+    flex-grow: 1; 
+   }
+}
+
+.nav-arrow {
+    width: 38px;
+    height: 38px;
+    display: inline-flex;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.arrow-prev { 
+    background-color: var(--primary-color); 
+    border: 1px solid var(--primary-color); 
+}
+
+.arrow-next { 
+    background-color: var(--primary-color); 
+    border: 1px solid var(--primary-color); 
+}
+
+.gallery-content{
+    width: 450px;
+}
+
+.gallery-more{
+    display: none;
+}
+
+/* Album header */
+.album-header {
+    background-color: #f8f9fa;
+    border: 1px solid #e8edf5;
+}
+
+.album-badge {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #032A63;
+    background-color: #e8edf5;
+    padding: 4px 12px;
+    border-radius: 50px;
+}
+
+.album-count {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #032A63;
+    margin-bottom: 0;
+}
+
+/* Photo cards */
+.photo-card {
+    cursor: pointer;
+    background-color: #ffffff;
+    box-shadow: 0 2px 12px #032a6314;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 28px #032a6326;
+}
+
+.photo-card:focus-visible {
+    outline: 2px solid #032A63;
+    outline-offset: 3px;
+}
+
+.photo-card-img-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.photo-card-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.photo-card:hover .photo-card-img {
+    transform: scale(1.04);
+}
+
+.photo-card-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: #032A6333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: #ffffff;
+    font-size: 1.25rem;
+}
+
+.photo-card:hover .photo-card-overlay {
+    opacity: 1;
+}
+
+.photo-card-caption {
+    padding: 0.75rem 1rem;
+    border-top: 1px solid #f0f3f8;
+}
+
+.photo-caption-text {
+    font-size: 0.8rem;
+    color: #555555;
+    margin-bottom: 0;
+    line-height: 1.4;
+}
+
+/* Modal caption */
+.modal-caption {
+    background-color: #032A6399;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    width: auto;
+    max-width: 80%;
+}
+
+/* Hall of Fame — landscape cards to suit wide group photos */
+.hof-card .photo-card-img {
+    height: 180px;
+    object-position: center top;
+}
+
+@media (width < 768px) {
+    .photo-card-img {
+        height: 180px;
+    }
+
+    .album-header {
+        text-align: center;
+    }
+
+    .album-meta {
+        text-align: center !important;
+    }
+}
+
+/* Album card carousel */
+.album-card-carousel {
+    height: 260px;
+}
+
+.album-card-carousel .carousel-inner {
+    height: 100%;
+}
+
+.album-card-carousel .carousel-item {
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.album-card-overlay {
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* Album index card */
+.album-card {
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0 2px 12px #032a6314;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.album-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 28px #032a6326;
+}
+
+.album-card:focus-visible {
+    outline: 2px solid #032A63;
+    outline-offset: 3px;
+}
+
+.album-card-img-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.album-card-img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.album-card:hover .album-card-img {
+    transform: scale(1.04);
+}
+
+.album-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, #032a63a6 0%, #00000000 60%);
+    display: flex;
+    align-items: flex-end;
+    padding: 1rem;
+}
+
+.album-card-count {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #032a6373;
+    padding: 4px 12px;
+    border-radius: 50px;
+}
+
+.album-card-body {
+    padding: 1.25rem 1.25rem 1.5rem;
+    border-top: 1px solid #f0f3f8;
+}
+
+.album-card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #032A63;
+    margin-bottom: 0.4rem;
+}
+
+.album-card-desc {
+    font-size: 0.85rem;
+    color: #666666;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+}
+
+.album-card-link {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #032A63;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Album page breadcrumb */
+.album-breadcrumb-link {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #032A63;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: opacity 0.2s ease;
+}
+
+.album-breadcrumb-link:hover {
+    opacity: 0.7;
+    color: #032A63;
+}
+
+.album-breadcrumb-link:active {
+    opacity: 0.5;
+}

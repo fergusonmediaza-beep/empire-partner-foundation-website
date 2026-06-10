@@ -1,0 +1,75 @@
+name: Production Automation
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  production-website:
+    runs-on: ubuntu-latest-m
+    if: github.ref == 'refs/heads/main'
+    environment: prod-env
+
+    outputs:
+      NEW_PROD_TAG: ${{ steps.set_tag.outputs.NEW_PROD_TAG }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Set Production Image Name
+        run: echo "PROD_IMAGE_NAME=${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKER_REPO }}" >> $GITHUB_ENV
+
+      - name: Auto-increment Production Tag
+        id: set_tag
+        run: |
+          NEW_PROD_TAG="prod_v${{ github.run_number }}"
+          echo "New Tag: $NEW_PROD_TAG"
+          echo "NEW_PROD_TAG=$NEW_PROD_TAG" >> $GITHUB_OUTPUT
+      - name: Build & Push Docker Image
+        run: |
+          docker build -t "$PROD_IMAGE_NAME:${{ steps.set_tag.outputs.NEW_PROD_TAG }}" .
+          docker push "$PROD_IMAGE_NAME:${{ steps.set_tag.outputs.NEW_PROD_TAG }}"
+      - name: Logout from Docker Hub
+        run: docker logout
+
+
+  deploy-prod-website:
+    runs-on: ubuntu-latest-m
+    needs: production-website
+    if: github.ref == 'refs/heads/main'
+    environment: prod-env
+    steps:
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Deploy via AWS SSM
+        run: |
+          INSTANCE_ID="${{ secrets.EC2_INSTANCE_ID }}"
+          LATEST_WEBSITE_TAG="${{ needs.production-website.outputs.NEW_PROD_TAG }}"
+          echo "Deploying Production tag: $NEW_PROD_TAG to instance $INSTANCE_ID"
+          aws ssm send-command \
+            --instance-ids "$INSTANCE_ID" \
+            --document-name "AWS-RunShellScript" \
+            --comment "Production Website Deployment" \
+            --parameters commands="[
+              \"cd /home/ubuntu/prod_websites/empire\",
+              \"sed -i 's/^PROD_TAG=.*/PROD_TAG=$LATEST_WEBSITE_TAG/' .env\",
+              \"docker compose pull prod\",
+              \"docker compose up -d prod\"
+            ]" \
+            --output text
