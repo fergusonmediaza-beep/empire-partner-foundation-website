@@ -24,7 +24,7 @@ body {
 }
 
 .hero-section {
-    background: url('/assets/epf-hero.webp') no-repeat center center;
+    background: url('../assets/epf-hero.webp') no-repeat center center;
     background-size: cover;
     background-color: #000000;
 }
@@ -347,7 +347,7 @@ body {
 }
 
 .about-hero{
-    background: url('/assets/about-hero.webp') center/cover;
+    background: url('../assets/about-hero.webp') center/cover;
 }
 
 /* CSI PAGE */
@@ -530,13 +530,13 @@ body {
 
 .hero-section-mobile{
     min-height: 100vh;
-    background: url('/assets/epf-hero.webp') no-repeat center center;
+    background: url('../assets/epf-hero.webp') no-repeat center center;
     background-size: cover;
 }
 
 @media (width < 576px) {
     .hero-section-mobile {
-        background-image: url('/assets/epf-hero-mobile.webp');
+        background-image: url('../assets/epf-hero-mobile.webp');
     }
 
     .hero-section-mobile h1.mobile-text,

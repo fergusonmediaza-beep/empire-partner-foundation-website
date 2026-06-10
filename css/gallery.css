@@ -1,5 +1,5 @@
 .header-hero {
-    background-image: url('/assets/gallery-hero.webp'); 
+    background-image: url('../assets/gallery-hero.webp');
     background-size: cover;
     background-position: center;
     height: 70vh;
