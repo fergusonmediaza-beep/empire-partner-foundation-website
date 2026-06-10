@@ -1,10 +1,14 @@
 
 
-#Ignore vscode AI rules
-.github/instructions/codacy.instructions.md
-
 # OS files
 .DS_Store
 
 # Claude Code project memory
 .claude
+
+# Deployment files - handled by deploying team, kept local only
+Dockerfile
+nginx.conf
+.github/
+.codacy/
+.vscode/
