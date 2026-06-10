@@ -141,6 +141,36 @@ body {
 
 .nav-link{
     font-size: 13px;
+    white-space: nowrap;
+}
+
+@media (width >= 992px) and (width < 1200px) {
+    .navbar-nav .nav-link {
+        font-size: 10px;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    .logo-title {
+        font-size: 12px;
+    }
+
+    .logo-subtitle {
+        font-size: 6px;
+    }
+
+    .logo img {
+        height: 42px;
+    }
+
+    .blue-button {
+        font-size: 10px;
+        white-space: nowrap;
+        padding-top: 8px !important;
+        padding-bottom: 8px !important;
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+    }
 }
 
 .info{
