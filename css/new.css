@@ -506,6 +506,20 @@ body {
     display: block;
 }
 
+/* Desktop mega-menu hover-to-open */
+@media (width >= 992px) {
+    .altenative-nav .nav-item.dropdown:hover > .dropdown-menu,
+    .navbar-bg-transparent .nav-item.dropdown:hover > .dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+    .altenative-nav .mega-menu,
+    .navbar-bg-transparent .mega-menu {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
 @media (width < 768px) {
     .hero-title-csi {
         font-size: 2.2rem;
