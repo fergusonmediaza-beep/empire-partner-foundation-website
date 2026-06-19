@@ -57,7 +57,7 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
         requestAnimationFrame(step);
     }
 
-    var counters = document.querySelectorAll('.portfolio-metric[data-target]');
+    var counters = document.querySelectorAll('.portfolio-metric[data-target], .stat-number[data-target]');
     if (!counters.length) return;
 
     var observer = new IntersectionObserver(function (entries) {
