@@ -2180,6 +2180,14 @@ body {
     color: #032A63;
 }
 
+.cq-stat-number { color: #032A63; }
+
+.cq-img-sm { height: 200px; }
+
+.cq-img-md { height: 260px; }
+
+.cq-img-xs { height: 180px; }
+
 .hub-live-badge {
     background-color: #032A63;
     color: #ffffff;
