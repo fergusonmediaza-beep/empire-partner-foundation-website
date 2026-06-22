@@ -62,12 +62,12 @@
     font-size: 3rem;
   }
   
-  .hero-description {
-    font-size: 0.8rem !important;
+  .site-body .hero-description {
+    font-size: 0.8rem;
   }
 
-  .glass-card{
-    font-size: 0.5rem !important;
+  .site-body .glass-card {
+    font-size: 0.5rem;
   }
 
   .stat-number{
@@ -157,13 +157,13 @@
         height: 42px;
     }
 
-    .blue-button {
+    .site-body .blue-button {
         font-size: 10px;
         white-space: nowrap;
-        padding-top: 8px !important;
-        padding-bottom: 8px !important;
-        padding-left: 14px !important;
-        padding-right: 14px !important;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 14px;
+        padding-right: 14px;
     }
 }
 
@@ -171,28 +171,28 @@
     font-size: 12px;
 }
 
-.btn-global {
-    font-size: 11px !important;
-    font-weight: bold !important;
+.site-body .btn-global {
+    font-size: 11px;
+    font-weight: bold;
 }
 
-.blue-button{
-    padding-top: 15px !important;
-    padding-bottom: 15px !important;
+.site-body .blue-button {
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
-.sector-card {
-    background-color: var(--primary-color) !important;
+.site-body .sector-card {
+    background-color: var(--primary-color);
     transition: transform var(--transition), box-shadow var(--transition), background-color var(--transition);
     cursor: pointer;
 }
 
-.sector-card .text-dark {
-    color: white !important;
+.site-body .sector-card .text-dark {
+    color: white;
 }
 
-.sector-card .text-secondary {
-    color: white !important;
+.site-body .sector-card .text-secondary {
+    color: white;
 }
 
   .epf-tabs {
@@ -235,15 +235,15 @@
     color: var(--primary-color);
 }
 
-.sector-card:hover .btn-primary {
-    background-color: white !important;
-    color: var(--primary-color) !important;
-    border-color: white !important;
+.site-body .sector-card:hover .btn-primary {
+    background-color: white;
+    color: var(--primary-color);
+    border-color: white;
 }
 
 /* Footer */
-.footer {
-    background: white !important;
+.site-body .footer {
+    background: white;
     padding: 70px 0 20px;
     color: black;
 }
@@ -314,10 +314,10 @@
 }
 
 /* When navbar is scrolled */
-.navbar-bg-transparent.scrolled .blue-button {
-    background-color: white !important;
-    color: var(--primary-color) !important;
-    border-color: white !important;
+.site-body .navbar-bg-transparent.scrolled .blue-button {
+    background-color: white;
+    color: var(--primary-color);
+    border-color: white;
 }
 
 .hero-content{
@@ -582,9 +582,9 @@
   width: auto;
 }
 
-.mobile-menu{
-  background: var(--primary-color); 
-  width: 85% !important;
+.mobile-menu {
+  background: var(--primary-color);
+  --bs-offcanvas-width: 85%;
 }
 
 .hero-section-mobile{
@@ -603,18 +603,18 @@
         transform: translateY(-7rem);
     }
 
-    .hero-section-mobile .text-white > p {
-        margin-bottom: 14rem !important;
+    .site-body .hero-section-mobile .text-white > p {
+        margin-bottom: 14rem;
     }
 }
 
 @media (width >= 576px) and (width < 992px) {
-    .hero-section-mobile h1.mobile-text {
-        margin-top: 4rem !important;
+    .site-body .hero-section-mobile h1.mobile-text {
+        margin-top: 4rem;
     }
 
-    .hero-section-mobile .text-white > p {
-        margin-bottom: 32rem !important;
+    .site-body .hero-section-mobile .text-white > p {
+        margin-bottom: 32rem;
     }
 }
 
@@ -623,8 +623,8 @@
     background-color: var(--primary-color);
 }
 
-.blog-hero{
-    margin-top: 110px !important;
+.site-body .blog-hero {
+    margin-top: 110px;
     margin: 10px;
     height: 60vh;
     background-image: linear-gradient(#000000bf, #000000bf), url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&h=400&fit=crop'); 
@@ -659,24 +659,24 @@
 /* Mobile fixes: ensure offcanvas overlays and header overlays don't block the menu */
 @media (width < 991.98px) {
   /* Bring offcanvas above any page overlays */
-  .offcanvas {
-    z-index: 1090 !important;
+  .site-body .offcanvas {
+    z-index: 1090;
   }
 
-  .offcanvas-backdrop {
-    z-index: 1085 !important;
+  .site-body .offcanvas-backdrop {
+    z-index: 1085;
   }
 
   /* Prevent page overlay from blocking offcanvas clicks */
-  .contact-header .overlay {
-    z-index: 0 !important;
+  .site-body .contact-header .overlay {
+    z-index: 0;
     pointer-events: none;
   }
 
   /* Remove left border from the first offcanvas item and normalize heights */
-  .offcanvas .navbar-nav .nav-item:first-child {
-    border-left: none !important;
-    padding-left: 0 !important;
+  .site-body .offcanvas .navbar-nav .nav-item:first-child {
+    border-left: none;
+    padding-left: 0;
   }
 
   /* Make offcanvas nav links consistent height and vertically centered */
@@ -731,8 +731,8 @@
   color: #fff;
 }
 
-.pbo-btn{
-    color: black !important;
+.site-body .pbo-btn {
+    color: black;
 }
 
 
