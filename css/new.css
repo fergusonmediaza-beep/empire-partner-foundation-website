@@ -2,11 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
 
-html,
-.site-body {
-    overflow-x: hidden;
-}
-
 /* ---------- COLORS (only) ---------- */
 :root {
     --primary-color: #032A63;
@@ -15,7 +10,6 @@ html,
     --text-light: #555555;
     --transition: 0.3s ease;
 }
-
 
 .site-body {
     font-family: Montserrat, sans-serif;
@@ -114,8 +108,8 @@ html,
     gap: 10px; /* Space between image and text */
 }
 
-.logo img {
-    height: 50px; /* Adjust the height to fit nicely */
+.logo-icon {
+    height: 50px;
 }
 
 .logo-title {
@@ -450,7 +444,7 @@ html,
     width: 580px;
     border: none;
     border-radius: 0.75rem;
-    box-shadow: 0 15px 50px rgba(3, 42, 99, 0.15);
+    box-shadow: 0 15px 50px #032a6326;
 }
 
 .mega-menu-item {
@@ -1442,7 +1436,7 @@ html,
     font-weight: 700;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.5);
+    color: #ffffff80;
     margin-bottom: 1.25rem;
 }
 
@@ -1465,14 +1459,14 @@ html,
 .btbl-hero-tagline {
     font-size: clamp(1.1rem, 2.5vw, 1.5rem);
     font-weight: 300;
-    color: rgba(255,255,255,0.8);
+    color: #ffffffcc;
     margin-bottom: 0.75rem;
     font-style: italic;
 }
 
 .btbl-hero-descriptor {
     font-size: 0.9rem;
-    color: rgba(255,255,255,0.45);
+    color: #ffffff73;
     letter-spacing: 0.02em;
     margin-bottom: 0;
 }
@@ -1492,12 +1486,12 @@ html,
     display: block;
     width: 1px;
     height: 40px;
-    background: linear-gradient(to bottom, rgba(255,255,255,0.4), transparent);
+    background: linear-gradient(to bottom, #ffffff66, transparent);
 }
 
 .btbl-hero-scroll-text {
     font-size: 0.65rem;
-    color: rgba(255,255,255,0.3);
+    color: #ffffff4d;
     letter-spacing: 0.15em;
     text-transform: uppercase;
 }
@@ -1522,7 +1516,7 @@ html,
 .btbl-btn-outline {
     background: transparent;
     color: #ffffff;
-    border: 2px solid rgba(255,255,255,0.4);
+    border: 2px solid #ffffff66;
     border-radius: 50px;
     font-weight: 600;
     font-size: 0.85rem;
@@ -1652,7 +1646,7 @@ html,
 
 .btbl-body-text {
     font-size: 0.9rem;
-    color: rgba(255,255,255,0.65);
+    color: #ffffffa6;
     line-height: 1.75;
 }
 
@@ -1665,8 +1659,8 @@ html,
 .btbl-key-statement {
     font-size: 1rem;
     font-style: italic;
-    color: rgba(255,255,255,0.5);
-    border-left: 3px solid rgba(255,255,255,0.25);
+    color: #ffffff80;
+    border-left: 3px solid #ffffff40;
     padding-left: 1.25rem;
     margin: 0;
 }
@@ -1686,7 +1680,7 @@ html,
     text-orientation: mixed;
     transform: rotate(180deg);
     font-size: 0.65rem;
-    color: rgba(255,255,255,0.35);
+    color: #ffffff59;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     padding: 0.5rem 0;
@@ -1706,8 +1700,8 @@ html,
 }
 
 .btbl-matrix-cell {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
+    background: #ffffff0a;
+    border: 1px solid #ffffff14;
     border-radius: 10px;
     padding: 1.25rem;
     position: relative;
@@ -1715,21 +1709,21 @@ html,
 }
 
 .btbl-matrix-noise {
-    border-color: rgba(255,255,255,0.1);
+    border-color: #ffffff1a;
 }
 
 .btbl-matrix-leaders {
-    background: rgba(3,42,99,0.25);
-    border-color: rgba(3,42,99,0.6);
+    background: #032a6340;
+    border-color: #032a6399;
 }
 
 .btbl-matrix-hidden {
-    border-color: rgba(255,255,255,0.05);
+    border-color: #ffffff0d;
 }
 
 .btbl-matrix-orgs {
-    background: rgba(201,168,76,0.1);
-    border-color: rgba(201,168,76,0.4);
+    background: #c9a84c1a;
+    border-color: #c9a84c66;
 }
 
 .btbl-matrix-badge {
@@ -1759,13 +1753,13 @@ html,
 
 .btbl-matrix-cell-desc {
     font-size: 0.68rem;
-    color: rgba(255,255,255,0.4);
+    color: #ffffff66;
     margin: 0;
 }
 
 .btbl-matrix-cell-btbl {
     font-size: 0.68rem;
-    color: rgba(255,255,255,0.6);
+    color: #ffffff99;
     font-weight: 600;
     margin: 0.35rem 0 0;
 }
@@ -1774,7 +1768,7 @@ html,
     display: flex;
     justify-content: space-between;
     font-size: 0.65rem;
-    color: rgba(255,255,255,0.35);
+    color: #ffffff59;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     padding: 0 0.25rem;
@@ -1826,8 +1820,8 @@ html,
 .btbl-process-step {
     flex: 1;
     min-width: 150px;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.1);
+    background: #ffffff0a;
+    border: 1px solid #ffffff1a;
     border-radius: 14px;
     padding: 2rem 1rem;
     text-align: center;
@@ -1837,12 +1831,12 @@ html,
     font-size: 0.65rem;
     font-weight: 700;
     letter-spacing: 0.15em;
-    color: rgba(255,255,255,0.4);
+    color: #ffffff66;
     margin-bottom: 0.75rem;
 }
 
 .btbl-process-fa-icon {
-    color: rgba(255,255,255,0.6);
+    color: #ffffff99;
     margin-bottom: 0.75rem;
 }
 
@@ -1855,7 +1849,7 @@ html,
 
 .btbl-process-desc {
     font-size: 0.75rem;
-    color: rgba(255,255,255,0.45);
+    color: #ffffff73;
     line-height: 1.5;
     margin: 0;
 }
@@ -1864,14 +1858,14 @@ html,
     display: flex;
     align-items: center;
     padding: 0 0.75rem;
-    color: rgba(255,255,255,0.3);
+    color: #ffffff4d;
     font-size: 0.85rem;
     flex-shrink: 0;
 }
 
 /* Metrics band */
 .btbl-metrics-band {
-    border-bottom: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid #ffffff0f;
 }
 
 .btbl-metric-card {
@@ -1894,7 +1888,7 @@ html,
 
 .btbl-metric-label {
     font-size: 0.72rem;
-    color: rgba(255,255,255,0.4);
+    color: #ffffff66;
     text-transform: uppercase;
     letter-spacing: 0.12em;
     margin: 0;
@@ -2074,7 +2068,7 @@ html,
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    border: 2px solid rgba(255,255,255,0.35);
+    border: 2px solid #ffffff59;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2086,7 +2080,7 @@ html,
 
 .btbl-cta-text {
     font-size: 0.88rem;
-    color: rgba(255,255,255,0.8);
+    color: #ffffffcc;
     margin: 0;
     line-height: 1.5;
 }
@@ -2097,19 +2091,19 @@ html,
     font-weight: 600;
     color: #ffffff;
     text-decoration: none;
-    border-bottom: 1px solid rgba(255,255,255,0.3);
+    border-bottom: 1px solid #ffffff4d;
     padding-bottom: 2px;
     transition: border-color 0.2s ease;
 }
 
 .btbl-cta-email:hover {
-    color: rgba(255,255,255,0.8);
-    border-color: rgba(255,255,255,0.6);
+    color: #ffffffcc;
+    border-color: #ffffff99;
 }
 
 .btbl-cta-final {
     font-size: 1rem;
-    color: rgba(255,255,255,0.45);
+    color: #ffffff73;
     line-height: 1.65;
     font-style: italic;
 }
@@ -2166,7 +2160,7 @@ html,
 
 .hub-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 30px rgba(3, 42, 99, 0.12) !important;
+    box-shadow: 0 12px 30px #032a631f;
 }
 
 .hub-icon {

@@ -17,7 +17,7 @@
 <nav class="navbar navbar-expand-lg altenative-nav fixed-top d-none d-lg-block">
     <div class="container-fluid px-5">
         <a href="index.html" class="logo d-flex align-items-center text-decoration-none">
-            <img src="https://empirewebvideos.s3.us-east-1.amazonaws.com/websites/empire/images/home/EPF-logo-white.png" alt="Company Logo">
+            <img src="https://empirewebvideos.s3.us-east-1.amazonaws.com/websites/empire/images/home/EPF-logo-white.png" alt="Company Logo" class="logo-icon">
             <div class="logo-text w-auto d-flex flex-column text-white">
                 <span class="logo-title fw-bold">EMPIRE PARTNER <br>FOUNDATION</span>
                 <span class="logo-subtitle text-uppercase">YOUTH, TECH AND ENTREPRENEURSHIP</span>
@@ -480,7 +480,8 @@
               </div>
               <p class="newsletter-subtitle small mt-3 mb-2">Subscribe to our newsletter</p>
               <form id="newsletter-form" class="newsletter-form" novalidate>
-                  <input type="email" name="email" class="form-control newsletter-input mb-2" placeholder="Your email address" required>
+                  <label for="newsletter-email" class="visually-hidden">Email address</label>
+                <input type="email" id="newsletter-email" name="email" class="form-control newsletter-input mb-2" placeholder="Your email address" required>
                   <button type="submit" class="btn newsletter-btn w-100">Subscribe</button>
               </form>
           </div>
