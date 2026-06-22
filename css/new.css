@@ -2158,3 +2158,32 @@ body {
         padding: 1.25rem 0.5rem;
     }
 }
+/* Tech Hubs */
+.hub-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hub-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(3, 42, 99, 0.12) !important;
+}
+
+.hub-icon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eef2ff;
+    border-radius: 50%;
+    color: #032A63;
+}
+
+.hub-live-badge {
+    background-color: #d1fae5;
+    color: #065f46;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    padding: 0.4rem 0.85rem;
+}
