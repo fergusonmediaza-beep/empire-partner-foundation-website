@@ -1,4 +1,4 @@
-/* global $, emailjs, dataLayer, Swal, document, window, requestAnimationFrame, IntersectionObserver, fetch, setTimeout */
+/* global $, emailjs, dataLayer, Swal, document, window, requestAnimationFrame, IntersectionObserver, fetch, setTimeout, console */
 
 function closeNewsletterToast() {
     const toast = document.getElementById('newsletter-toast');
