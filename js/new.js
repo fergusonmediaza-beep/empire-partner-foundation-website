@@ -105,7 +105,7 @@ function initContactForm() {
         $text.text('Sending...');
         $spinner.removeClass('d-none');
 
-        emailjs.sendForm('service_1ktudwa', 'template_xqvjiwr', this)
+        emailjs.sendForm('service_h9vkkpb', 'template_xqvjiwr', this)
             .then(function () {
                 $('#contact_form')[0].reset();
                 Swal.fire({

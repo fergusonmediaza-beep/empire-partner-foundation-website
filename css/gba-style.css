@@ -6,7 +6,7 @@
     --ring-color: #2d7a4d1f;
 }
 
-body{
+.gba-page {
     font-family: Poppins, sans-serif;
 }
 
@@ -93,7 +93,7 @@ body{
     right: 12%;
     width: 500px;
     height: 500px;
-    background: url('/assets/gba-hero-img.png') center/cover;
+    background: url('/assets/gba-hero-img.webp') center/cover;
     z-index: 2;
 }
 
@@ -195,7 +195,7 @@ body{
     padding-left: 1.25rem;
 }
 
-.custom-list li {
+.custom-list-item {
     margin-bottom: 0.25rem;
     font-size: 1.1rem;
 }
