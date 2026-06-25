@@ -22,7 +22,7 @@
     background: url('../assets/epf-hero.webp') no-repeat center 70%;
     background-size: cover;
     background-color: #000000;
-    min-height: 700px;
+    min-height: 850px;
 }
 
 .navbar {
@@ -63,7 +63,7 @@
   .hero-title {
     font-size: 3rem;
   }
-  
+
   .site-body .hero-description {
     font-size: 0.8rem;
   }
@@ -74,6 +74,10 @@
 
   .stat-number {
     font-size: 25px;
+  }
+
+  .hero-content {
+    padding-top: 7rem;
   }
 }
 
