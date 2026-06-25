@@ -121,10 +121,12 @@
 .logo-title {
     font-size: 15px;
     line-height: 1.1;
+    white-space: nowrap;
 }
 
 .logo-subtitle {
     font-size: 7px;
+    white-space: nowrap;
 }
 
 .btn-primary {
