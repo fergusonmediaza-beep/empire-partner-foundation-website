@@ -187,6 +187,7 @@
 .site-body .blue-button {
     padding-top: 15px;
     padding-bottom: 15px;
+    white-space: nowrap;
 }
 
 .site-body .sector-card {
