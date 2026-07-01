@@ -25,10 +25,26 @@ function animateStat(targetId, targetValue) {
     if (el) observer.observe(el);
 }
 
+function animateProgressBars() {
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            var bar = entry.target;
+            bar.style.width = bar.getAttribute('data-width') + '%';
+            observer.unobserve(bar);
+        });
+    }, { threshold: 0.3 });
+
+    document.querySelectorAll('.impact-progress-bar').forEach(function (bar) {
+        observer.observe(bar);
+    });
+}
+
 $(document).ready(function () {
     animateStat('stat-1', 14000);
     animateStat('stat-2', 50);
     animateStat('stat-3', 50);
     animateStat('stat-4', 700);
     animateStat('stat-5', 5000);
+    animateProgressBars();
 });

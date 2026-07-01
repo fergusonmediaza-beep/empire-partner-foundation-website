@@ -835,6 +835,163 @@
     margin-top: 1.5rem;
 }
 
+.impact-stat-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    height: 100%;
+    box-shadow: 0 4px 16px #032a630d;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.impact-stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px #032a631a;
+}
+
+.impact-stat-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.impact-stat-icon {
+    width: 52px;
+    height: 52px;
+    background-color: #032a63;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.impact-stat-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #555555;
+    margin-bottom: 0.1rem;
+}
+
+.impact-stat-number {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #01132d;
+    line-height: 1;
+}
+
+.impact-progress-wrap {
+    background-color: #e8edf2;
+    border-radius: 3px;
+    overflow: hidden;
+    height: 6px;
+    margin: 0.85rem 0;
+}
+
+.impact-progress-bar {
+    height: 6px;
+    background-color: #032a63;
+    border-radius: 3px;
+    width: 0;
+    transition: width 1.2s ease;
+}
+
+.impact-stat-desc {
+    font-size: 0.8rem;
+    color: #666666;
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+.impact-split-section {
+    overflow: hidden;
+}
+
+.impact-split-text {
+    background-color: #01132d;
+    min-height: 420px;
+}
+
+.impact-split-img-wrap {
+    position: relative;
+    min-height: 420px;
+    overflow: hidden;
+}
+
+.impact-split-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.impact-initiative-card {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 20px #032a631a;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.impact-initiative-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px #032a6333;
+}
+
+.impact-initiative-img-wrap {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.impact-initiative-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.impact-initiative-card:hover .impact-initiative-img {
+    transform: scale(1.05);
+}
+
+.impact-initiative-icon-badge {
+    position: absolute;
+    bottom: -20px;
+    left: 1rem;
+    width: 42px;
+    height: 42px;
+    background-color: #032a63;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    border: 3px solid #ffffff;
+}
+
+.impact-initiative-body {
+    padding: 2rem 1rem 1.25rem;
+    background-color: #ffffff;
+}
+
+.impact-initiative-title {
+    font-weight: 700;
+    color: #01132d;
+    margin-bottom: 0.4rem;
+}
+
+.impact-initiative-desc {
+    color: #555555;
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
 .impact-bullet-list {
     list-style: none;
     padding-left: 0;
