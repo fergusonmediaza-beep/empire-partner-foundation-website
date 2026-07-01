@@ -749,6 +749,31 @@
     min-height: 300px;
 }
 
+.impact-bullet-list {
+    list-style: none;
+    padding-left: 0;
+    text-align: left;
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+}
+
+.impact-bullet-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: #444444;
+}
+
+.impact-bullet-arrow {
+    color: #032a63;
+    font-size: 0.75rem;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+}
+
 .donate-program-img {
     height: 220px;
     width: 100%;
