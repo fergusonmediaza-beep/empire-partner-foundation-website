@@ -276,6 +276,8 @@
     margin-bottom: 10px;
     transition: var(--transition);
     text-decoration: none;
+    overflow-wrap: break-word;
+    word-break: break-all;
 }
 
 .footer-link:hover {
