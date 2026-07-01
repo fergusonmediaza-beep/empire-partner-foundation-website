@@ -1,27 +1,32 @@
 /* global $, document, IntersectionObserver, setInterval, clearInterval */
 
-function animateStat(targetId, targetValue) {
-    let currentValue = 0;
-    const $element = $('#' + targetId);
+var STAT_DURATION = 2000;
+var STAT_STEPS = 60;
 
-    const observer = new IntersectionObserver(function (entries) {
+function animateStat(targetId, targetValue) {
+    var currentValue = 0;
+    var $element = $('#' + targetId);
+    var increment = targetValue / STAT_STEPS;
+    var delay = STAT_DURATION / STAT_STEPS;
+
+    var observer = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
             if (!entry.isIntersecting) return;
             observer.unobserve(entry.target);
 
-            const interval = setInterval(function () {
-                currentValue += Math.ceil(targetValue / 100);
+            var interval = setInterval(function () {
+                currentValue += increment;
                 if (currentValue >= targetValue) {
                     $element.text(targetValue + '+');
                     clearInterval(interval);
                 } else {
-                    $element.text(currentValue);
+                    $element.text(Math.floor(currentValue));
                 }
-            }, 50);
+            }, delay);
         });
     }, { threshold: 0.5 });
 
-    const el = document.getElementById(targetId);
+    var el = document.getElementById(targetId);
     if (el) observer.observe(el);
 }
 
