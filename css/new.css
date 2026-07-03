@@ -3173,6 +3173,33 @@
     margin: 0;
 }
 
+.sfx-hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #032a63;
+    color: #ffffff;
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 13px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    margin-top: 28px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.sfx-hero-btn:hover {
+    background-color: #01132d;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.sfx-hero-btn:focus-visible {
+    outline: 3px solid #032a63;
+    outline-offset: 2px;
+}
+
 .sfx-hero-right {
     position: relative;
     overflow: hidden;
